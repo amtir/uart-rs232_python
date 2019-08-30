@@ -1,0 +1,51 @@
+
+pi@raspberrypi:~/rtc_update $ sudo python3 rtc_update_uart.py 
+2019-08-28 15:59:28,457 — rtc_main — DEBUG — rtc_update_uart.py — __init__ — 47  — MainThread — Starting the program to update the rtc device
+2019-08-28 15:59:28,460 — rtc_main — DEBUG — rtc_update_uart.py — send_ENQ — 227  — MainThread — Sending an ENQ 0x05
+2019-08-28 15:59:28,466 — rtc_main — INFO — rtc_update_uart.py — update_RTC — 128  — MainThread — The RTC device is alive
+[69, 51, 50, 56, 48, 56, 49, 57, 49, 53, 53, 57, 50, 56]
+[69, 51, 50, 56, 48, 56, 49, 57, 49, 53, 53, 57, 50, 56, 3]
+bcc 125
+[69, 51, 50, 56, 48, 56, 49, 57, 49, 53, 53, 57, 50, 56, 3, 125]
+0x2 0x45 0x33 0x32 0x38 0x30 0x38 0x31 0x39 0x31 0x35 0x35 0x39 0x32 0x38 0x3 0x7d
+ E 3 2 8 0 8 1 9 1 5 5 9 2 8  }
+b'\x02E3280819155928\x03}'
+2019-08-28 15:59:28,494 — rtc_main — DEBUG — rtc_update_uart.py — send_Req_E3 — 289  — MainThread — Sending an E3 RTC update
+2019-08-28 15:59:28,496 — rtc_main — INFO — rtc_update_uart.py — update_RTC — 128  — MainThread — The RTC device is alive
+2019-08-28 15:59:28,497 — rtc_main — DEBUG — rtc_update_uart.py — update_RTC — 140  — MainThread — RTC device has been updated.
+2019-08-28 15:59:29,499 — rtc_main — DEBUG — rtc_update_uart.py — update_RTC — 142  — MainThread — Terminating and exiting the RTC update program.
+pi@raspberrypi:~/rtc_update $ 
+
+
+
+--------------------------------------------------
+
+
+pi@raspberrypi:~/rtc_update $ sudo python3 rtc_update_uart.py 
+2019-08-28 16:20:15,262 — rtc_main — DEBUG — rtc_update_uart.py — __init__ — 47  — MainThread — Starting the program to update the rtc device
+2019-08-28 16:20:15,265 — rtc_main — DEBUG — rtc_update_uart.py — send_ENQ — 227  — MainThread — Sending an ENQ 0x05
+2019-08-28 16:20:15,294 — rtc_main — INFO — rtc_update_uart.py — update_RTC — 128  — MainThread — The RTC device is alive
+[69, 51, 50, 56, 48, 56, 49, 57, 49, 54, 50, 48, 49, 53]
+[69, 51, 50, 56, 48, 56, 49, 57, 49, 54, 50, 48, 49, 53, 3]
+bcc 126
+[69, 51, 50, 56, 48, 56, 49, 57, 49, 54, 50, 48, 49, 53, 3, 126]
+0x2 0x45 0x33 0x32 0x38 0x30 0x38 0x31 0x39 0x31 0x36 0x32 0x30 0x31 0x35 0x3 0x7e
+ E 3 2 8 0 8 1 9 1 6 2 0 1 5  ~
+b'\x02E3280819162015\x03~'
+2019-08-28 16:20:15,324 — rtc_main — DEBUG — rtc_update_uart.py — send_Req_E3 — 289  — MainThread — Sending an E3 RTC update
+2019-08-28 16:20:17,328 — rtc_main — DEBUG — rtc_update_uart.py — update_RTC — 149  — MainThread — Empty byte - Timeout?
+2019-08-28 16:20:19,333 — rtc_main — DEBUG — rtc_update_uart.py — update_RTC — 149  — MainThread — Empty byte - Timeout?
+2019-08-28 16:20:21,337 — rtc_main — DEBUG — rtc_update_uart.py — update_RTC — 149  — MainThread — Empty byte - Timeout?
+2019-08-28 16:20:23,341 — rtc_main — DEBUG — rtc_update_uart.py — update_RTC — 149  — MainThread — Empty byte - Timeout?
+2019-08-28 16:20:25,345 — rtc_main — DEBUG — rtc_update_uart.py — update_RTC — 149  — MainThread — Empty byte - Timeout?
+2019-08-28 16:20:25,347 — rtc_main — CRITICAL — rtc_update_uart.py — update_RTC — 165  — MainThread — No ACK responses after few ENQ 0x05 queries.
+2019-08-28 16:20:25,348 — rtc_main — CRITICAL — rtc_update_uart.py — update_RTC — 166  — MainThread — Com Error - TimeOut - RS232 or Power supply.
+2019-08-28 16:20:25,349 — rtc_main — DEBUG — rtc_update_uart.py — update_RTC — 167  — MainThread — Please check the RS232 connection with RTC device or the RTC device's Power
+2019-08-28 16:20:25,350 — rtc_main — DEBUG — rtc_update_uart.py — update_RTC — 169  — MainThread — Terminating and exiting ...
+pi@raspberrypi:~/rtc_update $ 
+
+
+
+
+
+
